@@ -1,0 +1,31 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="home-content">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Home</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="main-section">
+    <img src="assets/icon/profile.png" alt="Profile" class="profile-img" />
+    <h2>Hello, User 👋</h2>
+    <p>Welcome to your first Ionic app! Explore and enjoy the features.</p>
+  </div>
+
+  <div class="glass-card">
+    <ion-button expand="block" color="primary" href="/tabs/tab3">
+      <ion-icon slot="start" name="images-outline"></ion-icon>
+      View Gallery
+    </ion-button>
+
+    <ion-button expand="block" color="tertiary" fill="outline" routerLink="/about">
+      <ion-icon slot="start" name="information-circle-outline"></ion-icon>
+      Learn More
+    </ion-button>
+  </div>
+</ion-content>
