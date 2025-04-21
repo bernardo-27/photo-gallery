@@ -6,14 +6,17 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <ion-img></ion-img>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="main-section">
+
+    <ion-col size="4" size-md="3" size-lg="3" *ngFor="let photo of photoService.photos; index as position">
+      <ion-card>
+        <ion-img [src]="photo.webviewPath" (click)="showActionSheet(photo, position)" class="gallery-img"></ion-img>
+      </ion-card>
+    </ion-col>
+  </div>
+
 
   <ion-fab vertical="bottom" horizontal="center" slot="fixed">
     <ion-fab-button (click)="addPhotoToGallery()">
